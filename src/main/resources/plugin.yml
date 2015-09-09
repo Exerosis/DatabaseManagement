@@ -1,0 +1,4 @@
+name: SQLDatabases
+main: me.exerosis.sql.SQLAPI
+version: 5.1.1
+depend: [P-3058_Pipeline_Accelerator]
