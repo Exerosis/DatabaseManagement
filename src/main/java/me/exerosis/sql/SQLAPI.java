@@ -11,7 +11,6 @@ import java.util.HashMap;
 public class SQLAPI extends JavaPlugin implements Listener {
     private static Plugin plugin;
     private static boolean debug;
-    private MySQLTable table;
 
     public static Plugin getPlugin() {
         return plugin;
@@ -31,7 +30,7 @@ public class SQLAPI extends JavaPlugin implements Listener {
     }
 
     public static class TableManager {
-        private static HashMap<String, MySQLTable> tables = new HashMap<String, MySQLTable>();
+        private static HashMap<String, MySQLTable> tables = new HashMap<>();
 
         public static MySQLTable addTable(String dbName, String tableName) {
             tables.put(tableName, new MySQLTable(dbName, tableName));
@@ -52,7 +51,6 @@ public class SQLAPI extends JavaPlugin implements Listener {
             return new SQLCommand(command, type, priority, runnable);
         }
     }
-
 }
 
 
